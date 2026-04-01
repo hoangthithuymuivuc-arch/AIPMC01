@@ -1,0 +1,155 @@
+/* PRODUCT ACADEMY BRAND GUIDELINES OVERRIDE */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;700;800&display=swap');
+
+:root {
+    /* Brand Colors */
+    --primary: #BA227B;
+    --primary-hover: #9c1a65;
+    --accent: #BA227B;
+    --gradient-1: linear-gradient(to right, #BA227B, #552A8A);
+    --gradient-2: linear-gradient(to right, #BA227B, #552A8A);
+
+    /* Backgrounds */
+    --bg-main: #0B1120;
+    /* Dark Navy for Main */
+    --bg-light: #FFFFFF;
+    /* Pure White */
+    --bg-gray: #F8F9FB;
+    /* Light Gray for cards */
+
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #a9b5c7;
+    /* Muted text for dark backgrounds */
+    --text-dark: #101D36;
+    /* Dark text for light backgrounds */
+    --text-dark-muted: #475569;
+    /* Muted text for light backgrounds */
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* Base Body (Dark Mode Default) */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   GLOBAL OVERRIDES (To fix white-on-white and dark-on-dark contrast issues)
+----------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title {
+    color: var(--text-primary);
+}
+
+/* Fix navbar transparency & Logo */
+.navbar {
+    background: rgba(11, 17, 32, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar .logo img {
+    filter: brightness(0) invert(1);
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT SECTIONS (Audience, Benefits/Info-blocks, Syllabus)
+----------------------------------------------------------------------------- */
+/* Force specific sections to be Light Theme */
+.audience,
+.info-blocks,
+.curriculum {
+    background-color: var(--bg-light) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Text inside Light Sections must be dark */
+.audience .section-title,
+.info-blocks .section-title,
+.curriculum .section-title,
+.audience h3,
+.info-blocks h3,
+.curriculum h3 {
+    color: var(--text-dark) !important;
+}
+
+.audience p,
+.info-blocks p,
+.curriculum p,
+.audience li,
+.info-blocks li,
+.curriculum li,
+.audience .section-desc,
+.curriculum .section-desc {
+    color: var(--text-dark-muted) !important;
+}
+
+/* Cards inside Light Sections */
+.glass-card {
+    background-color: var(--bg-gray) !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Accordion inside Light Sections (Syllabus) */
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.accordion-header {
+    color: var(--text-dark) !important;
+}
+
+.accordion-content p,
+.accordion-content li {
+    color: var(--text-dark-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   DARK SECTIONS (Hero, Instructors, Footer)
+----------------------------------------------------------------------------- */
+/* Hero and Instructors automatically inherit body dark theme, just ensuring colors */
+.hero-subtitle,
+.hero-meta p {
+    color: var(--text-secondary);
+}
+
+.instructor-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    /* Subtle dark glass */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.instructor-card h3 {
+    color: var(--text-primary) !important;
+}
+
+.instructor-card p,
+.instructor-card li {
+    color: var(--text-secondary) !important;
+}
+
+/* Footer ensure it stands out firmly dark even if .bg-darker is on it */
+.footer {
+    background-color: #050812 !important;
+    /* Very dark navy */
+    color: var(--text-secondary) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer .section-title {
+    color: var(--text-primary) !important;
+}
+
+.footer p,
+.footer a {
+    color: var(--text-secondary) !important;
+}
